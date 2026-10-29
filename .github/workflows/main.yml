@@ -22,5 +22,7 @@ jobs:
           echo "Commit author: $AUTHOR"
           if [ "$AUTHOR" = "Team Leader" ]; then
             sed -i '/<\/body>/i <p>Updated by Team Leader on '"$(date)"'</p>' index.html
+          elif [ "$AUTHOR" = "Member 1" ]; then
+            sed -i '/<\/body>/i <p>Updated by Member 1 on '"$(date)"'</p>' index.html
           fi
           cat index.html
